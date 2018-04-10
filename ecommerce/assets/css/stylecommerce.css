@@ -1,0 +1,23 @@
+body
+{
+     background:#8CCDE9;   
+     margin: 0;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+*{
+    box-sizing: border-box;
+    margin: 0; /*completar a tela */
+    font-size: 14px;
+}
+
+/*Header, foi definido uma class em Curriculum.html para poder acessar no css */
+.main-header
+{
+    background: rgb(2, 7, 15);
+    float: left;
+    clear: both;
+    width: 100%;
+    border-bottom: 3px solid #C2DCE7;
+    margin-bottom: 30px;
+    padding-top: 35px;
+}
