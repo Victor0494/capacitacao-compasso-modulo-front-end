@@ -79,7 +79,7 @@ section
 {
          float: left;
          width: 100%;
-         padding: 10px 162px;
+         padding: 10px 12.5%;
 }
 section h3
 {
@@ -156,5 +156,96 @@ section .ul-list h4
         text-align: center;
         padding: 10px;
         background: black;
+        margin-top: 40px;
 
+}
+
+
+/*FORM */
+.main-form
+{
+        display: block;
+        width: 500px;
+        margin: 0 auto;
+}
+
+.main-form .title
+{
+font-size:  25px;
+margin: 10px 0 20px;
+}
+.main-form .container-text
+{
+        float: left;
+        clear: both;
+        width: 100%;
+        margin-bottom: 20px;
+}
+.main-form .container-text label
+{
+        float: left;
+        clear: both;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 16px;
+}
+
+.main-form .container-text input:not([type=radio]):not([type=file]) 
+ {
+        float: left;
+        width: 100%;
+        border: 2px solid  rgba(0, 0, 0, 0.73)  ;
+        padding: 10px;
+}
+.main-form .container-text.radio label
+{
+        float: left;
+        width: auto;
+        margin: 0 10px 0 0;
+        font-size: 16px;
+        clear: none;
+}
+
+.main-form .container-text.radio input
+{
+        margin-right: 5px;
+}
+.main-form .container-text select
+{
+        width: 250px;
+        padding: 10px;
+        border: 2px solid #000000;
+}
+.main-form .container-text textarea
+{
+        resize: none;
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #000000;
+        font: 400 13.3333px Arial;
+}
+.main-form button
+{
+
+        width: 48%;
+        padding: 15px;
+        border: 3px solid black;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+}
+.main-form .btn-submit
+{       
+        float: left;
+        background: black;
+        color: white;
+        
+}
+.main-form .btn-reset
+{
+        float: right;
+        background: white;
+        color: black;
+        
 }

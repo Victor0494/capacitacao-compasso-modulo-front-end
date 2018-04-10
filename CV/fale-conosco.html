@@ -28,37 +28,37 @@
             </nav>    
         </header>
         <section>
-                <h2>Fale Conosco</h2>
-                <form>  
-                    <div>
+                <form class="main-form" >
+                    <h2 class="title"> Fale Conosco</h2>
+                    <div class="container-text">
                         <label for="name"> Nome:</label>
                         <input type="text" id="name" required>
                     </div>
-                    <did>
+                    <div class="container-text radio">
                         <label>
                                 <input type="radio" name="sex" value="Masculino"> Masculino
                         </label>
                         <label>
                                 <input type="radio" name="sex" value="Feminino">Feminino                        
                         </label>
-                    </did>
-                    <div>
+                    </div>
+                    <div class="container-text">
                         <label for="email"> Email:</label>
                         <input type="email" id="email" required>
                     </div>
-                    <div>
+                    <div class="container-text">
                             <label for="website">Website:</label>
                             <input type="url" id="website" pattern="https?://.+">
                         </div>
-                    <div>
+                    <div class="container-text">
                         <label for="phone">Telefone:</label>
                         <input type="tel" id="phone" required pattern="[0-9]{9,9}" >
                     </div>
-                    <div>
+                    <div class="container-text">
                         <label for="city">Cidade:</label>
                         <input type="text" id="city" required> 
                     </div>
-                    <div>
+                    <div class="container-text">
                         <label for="state">Estado:</label>
                         <select id="state" required>
                             <option value="RS">RS</option>
@@ -67,23 +67,23 @@
                             <option value="SP">SP</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="container-text">
                         <label for="subject">Assunto:</label>
                         <select id="subject" required> 
                                 <option value="sugestão">Sugestão</option>
                                 <option value="critica">Critica</option>                   
                         </select>
                     </div>
-                    <did>
+                    <div class="container-text">
                         <label for="archive">Arquivo</label>
                         <input type="file" id="archive">
-                    </did>
-                    <div>
+                    </div>
+                    <div class="container-text">
                         <label for="message">Mensagem:</label>
                         <textarea id="message" maxlength="140" cols="30" rows="5" placeholder="Escreva sua mensagem"></textarea>
                     </div>
-                    <button type="submit"> Enviar</button>
-                    <button type="reset">Cancelar</button>
+                    <button type="submit" class="btn-submit"> Enviar</button>
+                    <button type="reset" class="btn-reset">Cancelar</button>
                 </form>
             </section>
             <footer class="main-footer" >Todos os direitos reservados.</footer>      
