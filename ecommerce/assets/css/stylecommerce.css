@@ -1,23 +1,137 @@
 body
 {
-     background:#8CCDE9;   
+     background:#F3F3F3;   
      margin: 0;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 *{
     box-sizing: border-box;
-    margin: 0; /*completar a tela */
+     /*completar a tela */
     font-size: 14px;
 }
 
 /*Header, foi definido uma class em Curriculum.html para poder acessar no css */
 .main-header
 {
-    background: rgb(2, 7, 15);
+    background: rgb(252, 252, 252);
     float: left;
     clear: both;
     width: 100%;
-    border-bottom: 3px solid #C2DCE7;
-    margin-bottom: 30px;
-    padding-top: 35px;
+    padding: 0;
+    
+}
+.main-div
+{
+    width: 80%;
+    margin: 0 10%;
+    float: left;
+
+}
+/* onde irão ficar os menus*/
+.menu
+{
+        background: #312C2C;
+        width: 100%;
+        float: left;
+        padding: 10px;
+    
+}
+.menu .container-item
+{
+        
+        padding: 0 60px ;
+        list-style: none;
+        
+}
+.menu .container-item .item
+{
+        color: #FAF8F8;
+        float: left;
+        width: calc(100%/4);
+        text-align: center;      
+}
+.main-header .container-img img
+{
+        margin: 10px 0;
+        padding: 50px;
+        width: 480px;
+        float: left;
+    
+}
+.main-login
+{
+    background: #050505;
+    width: 300px;
+    float: right;
+    list-style: none;
+    
+        
+
+}
+
+.main-login .container-login
+{
+        float: left;
+
+}
+.main-login .container-login .login 
+{
+    width: 50%;
+    float: left;
+
+
+}
+
+.slogan
+{  
+    padding:80px;
+    background: #FAF8F8;
+        
+}
+
+
+
+.produtos
+{
+  width: 100%;
+  float: left;
+  padding: 70px;
+  background: #FDFCFC;
+  
+
+}
+.produtos .novidades
+{
+    float: left;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+.produtos .vendidos
+{
+    margin-top: 40px;
+    float: left;
+    padding: 20px;
+
+}
+
+.main-footer
+{
+    background: #FCFCFC;
+
+
+}
+.pesquisa
+{
+    float: left;
+    width: 40%;
+    margin-top: 102px;
+
+
+}
+.pesquisa input
+{
+    width:100%;
 }

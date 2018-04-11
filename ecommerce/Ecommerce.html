@@ -4,72 +4,76 @@
         <title>Kabum</title>
         <meta charset="utf-8">
         <meta name = "author" content = "Victor Martins">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+        <link rel="stylesheet" type="text/css" href="assets/css/stylecommerce.css"> 
     </head>
     <body>
         <header class="main-header">
             <div>
-                <figure>
-                    <img src="assets/img/LOGO2.png">
+                <figure class="container-img">
+                    <img src="assets/img/logo.jpg">
                 </figure>
-                <div>
-                    <form> Pesquisa </form>
-                </div>
-            <nav> 
-                <ul>
-                    <li>
-                        loggin
-                    </li>
-                        
-                    <li>
-                            conta
-                    </li>
-                </ul>  
-            </nav>
+                <nav class="main-login" > 
+                        <ul class="container-login">
+                            <li class="login">
+                                <a href="login.html"> loggin </a>
+                            </li>
+                                
+                            <li class="login">
+                                <a href="conta.html">minha conta </a>
+                            </li>
+                        </ul>  
+                    </nav>
+                
+                <form class="pesquisa">
+                    <input type="text" value="Pesquisar...">                  
+                </form>
+            
             </div>
-            <nav>
-                <ul>
-                    <li>
-                            GAMES 
+            <nav class="menu">
+                <ul class="container-item">
+                    <li class="item">
+                         <a href="games.html">GAMES </a> 
                     </li>
-                    <li>
-                            CADEIRA 
+                    <li class="item">
+                             <a href="cadeira.html">CADEIRA </a> 
                     </li>
-                    <li>
-                            SMARTPHONE 
+                    <li class="item">
+                             <a href="smartphone.html"> SMARTPHONE</a> 
                     </li>
-                    <li>
-                            INFORMATICA
+                    <li class="item">
+                           <a href="informatica.html">INFORMATICA</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div>
+        <div class="main-div">
             <section>
-                <h3>NOVIDADES</h3>
-                    <div>
-                            <a href="games.html"></a>
+                <div class="slogan" >
+                    <img src="assets/img/slogan.jpg">
+                </div>
+
+
+            </section>
+            <section class="produtos" >
+                    <div class="novidades">
                             <img src="assets/img/jogo.jpg" height="240" width="240" >
-            
                     </div>
-                    <div>
-                            <a href="cadeira.html"></a>
+                    <div class="novidades">
                             <img src="assets/img/cadeira.jpg" height="240" width="240">
-                        
                     </div>
-                    <div>
-                            <a href="Informatica"></a>
+                    <div class="novidades">
                             <img src="assets/img/roteador.jpg" height="240" width="240">
                         
                     </div>
-
-                    
-            </section>
-            <section>
-                <h4>Produtos mais vendidos</h4>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="vendidos">
+                        <img src="assets/img/jogo.jpg" height="240" width="240" >
+                    </div>
+                    <div class="vendidos">
+                            <img src="assets/img/cadeira.jpg" height="240" width="240">        
+                    </div>
+                    <div class="vendidos">
+                            <img src="assets/img/roteador.jpg" height="240" width="240">    
+                    </div>
             </section>
        
        
@@ -77,11 +81,11 @@
         </div>
 
 
-        <footer>
-            <div>
-                <div>istitucional</div>
-                <div>minha conta</div>
-                <div>assine nossa newsletter</div>
+        <footer class="main-footer">
+            <div class="container-footer">
+                <div class="if">istitucional</div>
+                <div class="if">minha conta</div>
+                <div class="if">assine nossa newsletter</div>
             </div>
 
         </footer>
