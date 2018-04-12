@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="A">
+
+    <input type="text" id="B">
+
+    <a href="#" id="soma">Soma</a>
+
+    <h1 id="resultado"></h1>
+    
+
+
+    <script>
+        var $A = document.getElementById('A');
+        var $B = document.getElementById('B');
+        var $R = document.getElementById('soma');
+        var $resultado = document.getElementById('resultado');
+
+
+        R.onclick = function()
+        {
+            var soma = parseInt($A.value) + parseInt($B.value);
+            $resultado.innerHTML(soma);
+
+        };
+    </script>
+
+
+
+    
+</body>
+</html>

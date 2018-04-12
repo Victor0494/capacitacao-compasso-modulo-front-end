@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+        <input type="text" id="txt_nome">
+
+
+        <a href="http://google.com" onclick="return confirm('Deseja redimencionar ?')">Google.com</a>
+
+        <a href="http://www.compasso.com.br" id="linkcompasso" >Compasso.com.br </a>
+        
+
+        <script>
+            //esta pegando pelo ID criado antes
+            //cria referencia de um elemento
+            var link_compasso = document.getElementById('linkcompasso');
+            var input_nome = document.getElementById('txt_nome');
+            //console.log(link_compasso);
+            
+
+            //link_compasso.innerHTML = "Testando o JavaScript";
+
+            link_compasso.onclick = function()
+            {
+                //texto do link em link_compasso.innerHTML
+                //ou this.innerHTML
+                input_nome.value = this.innerHTML;
+                console.log(this.innerHTML); 
+                return false;
+            };
+            
+            input_nome.onfocus = function()
+            {
+                    input_nome.value = "Novo Texto";
+
+            };
+            input_nome.onblur = function()
+            {
+                    input_nome.value = " "
+
+            };
+            
+            
+
+            // focus: entrar no campo
+            // blur: sair do campo
+
+        </script>
+
+</body>
+</html>

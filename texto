@@ -1,0 +1,17 @@
+alert('Ola JavaScript')/*trava o javascript*/
+        
+
+     <script> aqui começa o java script
+        alert('Ola JavaScript')/*trava o javascript*/
+        console.log('Ola JavaScript');  /*testa o codigo*/  
+    </script>
+
+
+
+                    return : pega o valor do evento a frente dele no caso o confirm
+                    confirm: abre a opçcao de cancelar ou ir para outro site
+                    onclick: abre  janela de confimr
+                    
+
+
+<a href="http://google.com" onclick="return confirm('Deseja redimencionar ?')">Google.com</a>
