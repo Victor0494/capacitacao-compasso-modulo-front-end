@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <input type="text" id="A">
+    <input type="text" id="valor1">
 
-    <input type="text" id="B">
+    <input type="text" id="valor2">
 
     <a href="#" id="soma">Soma</a>
 
@@ -19,17 +19,18 @@
 
 
     <script>
-        var $A = document.getElementById('A');
-        var $B = document.getElementById('B');
-        var $R = document.getElementById('soma');
-        var $resultado = document.getElementById('resultado');
+        var link_valor1 = document.getElementById('valor1');
+        var link_valor2 = document.getElementById('valor2');
+        var link_soma = document.getElementById('soma');
+        var link_resultado = document.getElementById('resultado');
+        var teste = "entrou no campo";
 
-
-        R.onclick = function()
+        link_soma.onclick = function()
         {
-            var soma = parseInt($A.value) + parseInt($B.value);
-            $resultado.innerHTML(soma);
-
+            
+            var resposta = parseInt(link_valor1.value) + parseInt(link_valor2.value);
+            link_resultado.innerHTML = resposta;
+    
         };
     </script>
 

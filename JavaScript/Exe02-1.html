@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+    <!-- seletor, todos os elementos abaixo irão sofrer as regras abaixo--> 
+    <style>
+        #container-resultado{
+            display: none;
+        }
+    </style>
+
+
+<body>
+
+    <form action="" id="frm-busca">
+
+        <input class="campo" type="search" id="campo-busca" placeholder="Pesquisa..." >            
+    </form>
+    
+    <div id="container-resultado">
+        <h2> Resultado de busca</h2>
+        <h2  id="sugestoes-produtos"></h2>
+        <div id="resultado-busca"></div>
+    </div>
+
+    <script>
+        "use strict"; // obriga inicializar todas as variaveis
+        var $debug = true;
+        var $campo_busca = document.getElementById('campo-busca');// todas as referencias 
+        var $container_resultado = document.getElementById('container-resultado');
+        var $sugestoes_produtos = document.getElementById('sugestoes-produtos');
+        var $resultado_busca = document.getElementById('resultado-busca')
+
+        //array de sugestoes de buscas
+        var $ar_sugestoes_produtos = [ 
+        
+                "Detergente",
+                "Café",
+                "Erva",
+                "Cerveja"
+
+        ];
+        // array de resultado de busca
+        var $ar_resultados_busca = 
+        [   
+            {
+                "nome" : "Computador",
+                "descricao" : "um computador",
+                "img" : "https://img.purch.com/o/aHR0cHM6Ly93d3cubGFwdG9wbWFnLmNvbS9pbWFnZXMvdXBsb2Fkcy80NzU4L2cvbWFjYm9vay0xMmluY2gtMDAzLmpwZw==",
+                "link": "http://compasso.com.br",
+                "preco": 10.5
+            },
+            {
+                "nome" : "Playstation 4",
+                "descricao" : "um console",
+                "img" : "https://a-static.mlcdn.com.br/618x463/console-playstation-4-ps4-slim-1tb-sony/eshop24/18542/83dcd9ab219dda597e188c834e39a9db.jpg", 
+                "link": "http://compasso.com.br",
+                "preco": 45.5
+            },
+            
+            {
+                "nome" : "Xbox One",
+                "descricao" : "um outro console",
+                "img" : "https://i1.zst.com.br/thumbs/45/1b/38/18866102.jpg",
+                "link": "http://compasso.com.br",
+                "preco": 89.3
+            }
+
+            
+        ];
+        cl($ar_resultados_busca);
+
+
+        function cl($msg) // funcao para testar variaveis 
+        {
+            if($debug) console.log($msg);
+        }
+        function renderizaSugestoes(){
+                var $retorno ="";
+        
+            for(var $i = 0; $i <$ar_sugestoes_produtos.length; $i++)
+            {
+                    //cl($ar_sugestoes_produtos[$i]);
+                    $retorno += "<p>" +$ar_sugestoes_produtos[$i]+"</p>";
+            };
+            $sugestoes_produtos.innerHTML = $retorno;// esta mostrando o que há dentro da variavel retorno
+        };
+
+        function renderizaresultadosbusca()
+        {
+            var $retorno = "";
+            for(var $i = 0; $i <$ar_resultados_busca.length; $i++)
+            {
+                $retorno += "<div>"+
+                                    "<h3>"+ $ar_resultados_busca[$i].nome + "</h3>" +
+                                    "<img src='"+$ar_resultados_busca[$i].img+"'>"+
+                                    "<p>" + $ar_resultados_busca[$i].descricao + "</p>" + 
+                                    "<p>" + $ar_resultados_busca[$i].preco + "</p>"+
+                                    "<a href = '"+$ar_resultados_busca[$i].link+"'>Veja Mais</a>"+
+                            "</d>";
+            }
+            $resultado_busca.innerHTML = $retorno;
+        }
+
+        $campo_busca.onfocus = function()
+        {
+           // cl('entrou no campo');
+            $container_resultado.style.display = "block"; // nome da varial . style.display disponibiliza usar propriedades do css 
+            if(this.value.length === 0){
+                cl('exibe sugestoes esconde lista');
+                $sugestoes_produtos.style.display = "block";//bloqueia a tela
+                $resultado_busca.style.display = "none";    // limpa a tela 
+            } else{
+                cl('exibe lista esconde sugestoes');
+                $sugestoes_produtos.style.display = "none";
+                $resultado_busca.style.display = "block";    
+            
+            }
+
+
+        }
+        $campo_busca.onblur = function()
+        {
+            //cl('saiu no campo');
+            if(this.value.length === 0)
+                $container_resultado.style.display = "none";    
+        }
+
+        $campo_busca.onkeyup = function()
+        {
+            if(this.value.length === 0){
+                cl('exibe sugestoes esconde lista');
+                $sugestoes_produtos.style.display = "block";//bloqueia a tela
+                $resultado_busca.style.display = "none";    // limpa a tela 
+            } else{
+                cl('exibe lista esconde sugestoes');
+                $sugestoes_produtos.style.display = "none";
+                $resultado_busca.style.display = "block";    
+            
+            }
+
+        }
+
+
+        renderizaSugestoes();
+        renderizaresultadosbusca();
+
+    
+    </script>   
+</body>
+</html>
