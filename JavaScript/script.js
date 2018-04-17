@@ -59,7 +59,7 @@ $(function () {
             $div.append($p);
 
             //adiciono o objeto div no container produtos
-
+            //criando a did dentro do html
             $div_produtos.append($div);
         });
 

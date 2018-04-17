@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="txt_cep" maxlength="9" autofocus placeholder="CEP"></input><br>
+        <span class="hide">Pesquisando...</span>
+
+        <input type="text" id="txt_logradouro" placeholder="Logradouro" disabled></input><br>
+        <input type="text" id="txt_bairro" placeholder="Bairro" disabled></input><br>
+        <input type="text" id="txt_local" placeholder="Localidade" disabled></input><br>
+        <input type="text" id="txt_uf" placeholder="UF" disabled></input><br>
+        <button type="submit">Cadastrar</button>
+
+    </form>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.maskedinput.min.js"></script>
+    
+
+
+    <script>
+
+
+
+        var $txt_cep = $('#txt_cep');
+
+        $txt_cep.mask("99999-999");
+
+        $('#txt_cep').bind('keydown',function(event){
+            if(event.keyCode == 13){
+                event.preventDefault();                
+            
+            if(($txt_cep.val().length !=9)){
+                alert("CEP precisa ter 8 caracteres");
+                $txt_cep.val("");
+                return false;
+            }
+            $txt_cep.next('span').removeClass('hide');
+
+            var $option = {
+                "url" : "https://viacep.com.br/ws/" + $txt_cep.val().replace("-","") + "/json/unicode/"
+            };
+
+            $.ajax($option).done(function($data){
+
+                console.log($data);
+
+                $("#txt_logradouro").val($data.logradouro);
+                $("#txt_bairro").val($data.bairro);
+                $("#txt_local").val($data.local);
+                $("#txt_uf").val($data.uf);
+            }).always(function(){
+                $txt_cep.next('span').addClass('hide');
+            });
+        }
+
+    });
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
